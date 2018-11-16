@@ -35,8 +35,8 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 	BlackBoardComp->SetValueAsInt(IndexKey.SelectedKeyName, NextIndex);
 
 	auto WayPoint = BlackBoardComp->GetValueAsInt(WaypointKey.SelectedKeyName);
-	UE_LOG(LogTemp, Warning, TEXT("IndexKey = %i, name = %s"), Index, *IndexKey.SelectedKeyName.ToString());
-	UE_LOG(LogTemp, Warning, TEXT("WaypointKey = %i, name = %s"), WayPoint, *WaypointKey.SelectedKeyName.ToString());
+	//UE_LOG(LogTemp, Warning, TEXT("IndexKey = %i, name = %s"), Index, *IndexKey.SelectedKeyName.ToString());
+	//UE_LOG(LogTemp, Warning, TEXT("WaypointKey = %i, name = %s"), WayPoint, *WaypointKey.SelectedKeyName.ToString());
 	return EBTNodeResult::Succeeded;
 }
 
