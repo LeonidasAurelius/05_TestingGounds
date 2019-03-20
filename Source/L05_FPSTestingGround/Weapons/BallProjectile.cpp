@@ -29,6 +29,16 @@ ABallProjectile::ABallProjectile()
 
 	// Die after 3 seconds by default
 	InitialLifeSpan = 3.0f;
+	//UE_LOG(LogTemp, Warning, TEXT("!!!!!!!!Bullet location : %s"), *(this->GetTransform().GetLocation().ToString()));
+
+}
+
+void ABallProjectile::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	UE_LOG(LogTemp, Warning, TEXT("!!!!!!!!Bullet location : %s"), *(this->GetTransform().GetLocation().ToString()));
+
 }
 
 void ABallProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
